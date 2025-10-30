@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WebXR AR Measurement</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="info">Loading AR Measurement Tool...</div>
+
+  <!-- Local video feed (used in fallback or WebRTC mode) -->
+  <video id="videoFeed" autoplay playsinline muted style="display:none;"></video>
+
+  <!-- Socket.io client (needed for WebRTC signaling) -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Main logic: detects AR support, loads either AR or OpenCV mode -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
