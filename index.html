@@ -3,19 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WebXR AR Measurement</title>
+  <title>WebXR / Camera Measurement</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div id="info">Loading AR Measurement Tool...</div>
+  <div id="info">Tap "Start Camera" to begin measuring.</div>
+  <button id="startBtn" style="
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:12px 20px;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    background-color:#007bff;
+    color:white;
+  ">Start Camera</button>
 
-  <!-- Hidden video element for camera feed -->
-  <video id="videoFeed" autoplay playsinline muted style="display:none;"></video>
+  <video id="videoFeed" autoplay playsinline muted style="display:none; width:100vw; height:100vh; object-fit:cover;"></video>
 
-  <!-- ✅ Correct Socket.IO client version -->
-  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js" integrity="sha384-lYEXZ7mM1Eo8V1K8Vh8FrZp8hrKzBJoYbI2O+7W2C/zE7i8CQ7lRShCzN0lKvhcE" crossorigin="anonymous"></script>
-
-  <!-- Your JS logic -->
+  <!-- Socket.IO for signaling -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
