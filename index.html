@@ -9,13 +9,13 @@
 <body>
   <div id="info">Loading AR Measurement Tool...</div>
 
-  <!-- Local video feed (used in fallback or WebRTC mode) -->
+  <!-- Hidden video element for camera feed -->
   <video id="videoFeed" autoplay playsinline muted style="display:none;"></video>
 
-  <!-- Socket.io client (needed for WebRTC signaling) -->
-  <script src="/socket.io/socket.io.js"></script>
+  <!-- ✅ Correct Socket.IO client version -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js" integrity="sha384-lYEXZ7mM1Eo8V1K8Vh8FrZp8hrKzBJoYbI2O+7W2C/zE7i8CQ7lRShCzN0lKvhcE" crossorigin="anonymous"></script>
 
-  <!-- Main logic: detects AR support, loads either AR or OpenCV mode -->
+  <!-- Your JS logic -->
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
